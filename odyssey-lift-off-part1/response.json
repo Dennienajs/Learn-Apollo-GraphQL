@@ -1,0 +1,88 @@
+{
+  "tracksForHome": [
+    {
+      "__typename": "Track",
+      "id": "track_01",
+      "title": "Astro Kitty, Space Explorer",
+      "thumbnail": "https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg",
+      "length": 1210,
+      "modulesCount": 6,
+      "author": {
+        "__typename": "Author",
+        "id": "3bd2fcee-b3bd-4b6f-9d06-dbeec931f1ab",
+        "name": "Grumpy Cat",
+        "photo": "https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg"
+      }
+    },
+    {
+      "__typename": "Track",
+      "id": "track_01",
+      "title": "Astro Kitty, Space Explorer",
+      "thumbnail": "https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg",
+      "length": 1210,
+      "modulesCount": 6,
+      "author": {
+        "__typename": "Author",
+        "id": "3bd2fcee-b3bd-4b6f-9d06-dbeec931f1ab",
+        "name": "Grumpy Cat",
+        "photo": "https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg"
+      }
+    },
+    {
+      "__typename": "Track",
+      "id": "track_01",
+      "title": "Astro Kitty, Space Explorer",
+      "thumbnail": "https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg",
+      "length": 1210,
+      "modulesCount": 6,
+      "author": {
+        "__typename": "Author",
+        "id": "3bd2fcee-b3bd-4b6f-9d06-dbeec931f1ab",
+        "name": "Grumpy Cat",
+        "photo": "https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg"
+      }
+    },
+    {
+      "__typename": "Track",
+      "id": "track_01",
+      "title": "Astro Kitty, Space Explorer",
+      "thumbnail": "https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg",
+      "length": 1210,
+      "modulesCount": 6,
+      "author": {
+        "__typename": "Author",
+        "id": "3bd2fcee-b3bd-4b6f-9d06-dbeec931f1ab",
+        "name": "Grumpy Cat",
+        "photo": "https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg"
+      }
+    },
+    {
+      "__typename": "Track",
+      "id": "track_01",
+      "title": "Astro Kitty, Space Explorer",
+      "thumbnail": "https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg",
+      "length": 1210,
+      "modulesCount": 6,
+      "author": {
+        "__typename": "Author",
+        "id": "3bd2fcee-b3bd-4b6f-9d06-dbeec931f1ab",
+        "name": "Grumpy Cat",
+        "photo": "https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg"
+      }
+    },
+    {
+      "__typename": "Track",
+      "id": "track_01",
+      "title": "Astro Kitty, Space Explorer",
+      "thumbnail": "https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg",
+      "length": 1210,
+      "modulesCount": 6,
+      "author": {
+        "__typename": "Author",
+        "id": "3bd2fcee-b3bd-4b6f-9d06-dbeec931f1ab",
+        "name": "Grumpy Cat",
+        "photo": "https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg"
+      }
+    }
+  ]
+}
