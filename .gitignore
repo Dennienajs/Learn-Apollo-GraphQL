@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 .env
+odyssey-lift-off-part5-client
+odyssey-lift-off-part5-server
