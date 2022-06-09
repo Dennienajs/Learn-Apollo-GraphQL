@@ -24,7 +24,12 @@ class BookingsDb extends DataSource {
       storage: './services/bookings/bookings.db', // path to the bookings database file, relative to where this datasource is initialized,
       logging: false, // set this to true if you want to see logging output in the terminal console
     };
-    const sequelize = new Sequelize(config.database, config.username, config.password, config);
+    const sequelize = new Sequelize(
+      config.database,
+      config.username,
+      config.password,
+      config
+    );
 
     const db = {};
     db.Booking = Booking(sequelize, Sequelize.DataTypes);
@@ -49,7 +54,9 @@ class BookingsDb extends DataSource {
     if (status) {
       filterOptions.status = status;
     }
-    const bookings = await this.db.Booking.findAll({ where: { ...filterOptions } });
+    const bookings = await this.db.Booking.findAll({
+      where: { ...filterOptions },
+    });
     return bookings.map((b) => b.dataValues);
   }
 
@@ -58,18 +65,26 @@ class BookingsDb extends DataSource {
     if (status) {
       filterOptions.status = status;
     }
-    const bookings = await this.db.Booking.findAll({ where: { ...filterOptions } });
+    const bookings = await this.db.Booking.findAll({
+      where: { ...filterOptions },
+    });
     return bookings.map((b) => b.dataValues);
   }
 
   async getGuestIdForBooking(bookingId) {
-    const { guestId } = await this.db.Booking.findOne({ where: { id: bookingId }, attributes: ['guestId'] });
+    const { guestId } = await this.db.Booking.findOne({
+      where: { id: bookingId },
+      attributes: ['guestId'],
+    });
 
     return guestId;
   }
 
   async getListingIdForBooking(bookingId) {
-    const { listingId } = await this.db.Booking.findOne({ where: { id: bookingId }, attributes: ['listingId'] });
+    const { listingId } = await this.db.Booking.findOne({
+      where: { id: bookingId },
+      attributes: ['listingId'],
+    });
 
     return listingId;
   }
@@ -103,12 +118,23 @@ class BookingsDb extends DataSource {
       attributes: ['checkInDate', 'checkOutDate'],
     });
 
-    const bookingsWithDates = bookings.map((b) => ({ checkInDate: b.checkInDate, checkOutDate: b.checkOutDate }));
+    const bookingsWithDates = bookings.map((b) => ({
+      checkInDate: b.checkInDate,
+      checkOutDate: b.checkOutDate,
+    }));
     return bookingsWithDates;
   }
 
-  async createBooking({ listingId, checkInDate, checkOutDate, totalCost, guestId }) {
-    if (await this.isListingAvailable({ listingId, checkInDate, checkOutDate })) {
+  async createBooking({
+    listingId,
+    checkInDate,
+    checkOutDate,
+    totalCost,
+    guestId,
+  }) {
+    if (
+      await this.isListingAvailable({ listingId, checkInDate, checkOutDate })
+    ) {
       const booking = await this.db.Booking.create({
         id: uuidv4(),
         listingId,
@@ -125,7 +151,9 @@ class BookingsDb extends DataSource {
         checkOutDate: this.getHumanReadableDate(booking.checkOutDate),
       };
     } else {
-      throw new Error("We couldn't complete your request because the listing is unavailable for the given dates.");
+      throw new Error(
+        "We couldn't complete your request because the listing is unavailable for the given dates."
+      );
     }
   }
 }
